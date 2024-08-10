@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Green Forest</title>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+            integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+        <link rel="stylesheet" href="style.css">
+
+        <style>
+            .small-img-group{
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .small-img-col{
+                flex-basis: 24%;
+                cursor: pointer;
+            }
+            .sproduct select{
+                display: block;
+                padding: 5px 10px;
+            }
+
+            .sproduct input{
+                width: 50px;
+                height: 40px;
+                padding-left: 10px;
+                font-size: 16px;
+                margin-right: 10px;
+            }
+            .sproduct input:focus{
+                outline: none;
+            }
+
+            .buy-btn{
+                background:linear-gradient(rgb(12, 255, 158),rgb(169, 255, 129));
+                opacity:1;
+                transition: 0.3s all;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white py3 fixed-top">    
+            <div class="container">
+                <img src="img/logo1.png">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i id="bar" class="fas fa-bars"></i></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+    
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="plants.html">Plants</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="accessories.html">Accessories</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="far fa-search"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html">
+                        <i class="far fa-shopping-bag"></i>
+                    </a>
+                </li>
+              </div>
+            </div>
+          </nav>
+
+        <section class=" container sproduct my-5 pt-5">
+            <div class="row mt-5">
+                <div class="col-lg-5 col-md-12 col-12">
+                    <img class="img-fluid w-100 pb-1" src="img/index/1.avif" id="MainImg" alt="">
+
+                    <div class="small-img-group">
+                        <div class="small-img-col">
+                            <img src="img/index/1.avif" width="100%" class="small-img" alt="">
+                        </div>
+                        <div class="small-img-col">
+                            <img src="img/index/1a.avif" width="100%" class="small-img" alt="">
+                        </div>
+                        <div class="small-img-col">
+                            <img src="img/index/1b.avif" width="100%" class="small-img" alt="">
+                        </div>
+                        <div class="small-img-col">
+                            <img src="img/index/1c.avif" width="100%" class="small-img" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12 col-12">
+                    <h6> Home / Plants</h6>
+                    <h3 class="py-4"> Swiss Cheese Plant</h3>
+                    <h2 id="price">$20.95</h2>
+                    <select class="my-3">
+                        <option> Select Size</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    <input type="number" id="quantityInput" value="1" onchange="updatePrice()">
+                    <button class="buy-btn" onclick="addToCart()"> Add To Cart</button>
+                    <h4 class="mt-5 mb-5">Product Details</h4>
+                    <span>Discover the charm of the Swiss Cheese Plant, also known as Monstera deliciosa. This stunning plant is famous for its large, glossy leaves with unique natural holes, giving it a distinctive and tropical appearance. Ideal for both novice and experienced plant enthusiasts, the Swiss Cheese Plant thrives in a variety of indoor environments, preferring bright, indirect light and moderate watering. Not only does it add a touch of elegance to any space, but it also helps purify the air, making it a perfect addition to your home or office decor</span>
+                </div>
+            </div>
+        </section>
+
+        <footer class="mt-5 py-5">
+            <div class="row container mx-auto pt-5">
+                <div class="footer-one col-lg-3 col-md-6 col-12"> 
+                    <img src="img/logo2.png" alt="">
+                    <p class="pt-3">Green-Forest Plants and Accessories Shop has been your trusted source for high-quality plants and accessories since 2005. Our mission is to bring nature closer to you by offering a diverse range of greenery and gardening essentials, now available online for your convenience.</p>
+                </div>
+            
+                <div class="footer-one col-lg-3 col-md-6 col-12 mb-3"> 
+                    <h5 class="pb-2">Featured</h5>
+                    <ul class="text-uppercase list-unstyled">
+                        <li><a href="plants.html">Plants</a></li>
+                        <li><a href="accessories.html">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-one col-lg-3 col-md-6 col-12 mb-3"> 
+                    <h5 class="pb-2">Contact Us</h5>  
+                    <div>
+                    <h6 class="text-uppercase">Address</h6> 
+                    <p>GUSTO University, Time City</p>
+                    </div>
+                    
+                    <div>
+                    <h6 class="text-uppercase">Phone</h6>
+                    <p>09 123 456 789</p>
+                    </div>
+                    
+                    <div>
+                    <h6 class="text-uppercase">Email</h6>
+                    <p>linkhant@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="footer-one col-lg-3 col-md-6 col-12 mb-4">
+                    <h5 class="pb-2">Feats</h5>
+                    <div class="row">
+                        <img class="img-fluid w-25 h-100 m-2" src="img/insta/1.webp" alt="">
+                        <img class="img-fluid w-25 h-100 m-2" src="img/insta/2.webp" alt="">
+                        <img class="img-fluid w-25 h-100 m-2" src="img/insta/3.webp" alt="">
+                        <img class="img-fluid w-25 h-100 m-2" src="img/insta/4.webp" alt="">
+                        <img class="img-fluid w-25 h-100 m-2" src="img/insta/5.webp" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright mt-5">
+                <div class="row container mx-auto">
+                    
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <img src="img/payment.png" alt="">
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-12 text-nowrap mb-2">
+                        <p> GreenForest@2024 All Rights Reserved</p>
+                    </div>
+                    <div class="col lg-4 col-md-6 col-12">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+           </footer>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+            integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+            integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+            crossorigin="anonymous"></script>
+
+        <script>
+        var MainImg = document.getElementById('MainImg');
+        var smallimg = document.getElementsByClassName('small-img');
+    
+        smallimg[0].onclick = function(){
+            MainImg.src = smallimg[0].src;
+        }
+        smallimg[1].onclick = function(){
+            MainImg.src = smallimg[1].src;
+        }
+        smallimg[2].onclick = function(){
+            MainImg.src = smallimg[2].src;
+        }
+        smallimg[3].onclick = function(){
+            MainImg.src = smallimg[3].src;
+        }
+
+        function updatePrice() {
+    const price = 20.95; 
+    const quantity = parseInt(document.getElementById("quantityInput").value);
+    const totalPrice = price * quantity;
+    const priceElement = document.getElementById("price");
+    priceElement.textContent = "$" + totalPrice.toFixed(2);
+    }
+
+    function addToCart() {  
+    alert("Added to cart!");
+    }
+        </script>
+    </body>
+
+</html>
